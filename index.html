@@ -4,18 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css" integrity="sha512-DJLNx+VLY4aEiEQFjiawXaiceujj5GA7lIY8CHCIGQCBPfsEG0nGz1edb4Jvw1LR7q031zS5PpPqFuPA8ihlRA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <title>Razorpay</title>
 
 </head>
 <body>
    <nav class="bg-deepBlue">
-        <div class=" flex items-center justify-betweenrelative w-[1080px] text-white">
-            <!-- logo -->
-             <a href="#" class="py-7 pr-7">
-                <img src="/images/logo.svg" class="
-                w-[135px] " alt="">
-             </a>
-        </div>
+      <div class="relative w-[1080px] flex items-center justify-between  mx-auto"> <!-- Container -->
+
+         <!-- Razorpay Logo -->
+         <a href="#" class="pr-7 py-7">
+            <img class="w-[125px] h-[30px]" src="./images/logo.svg" alt="">
+         </a>
+
+         <!-- Navbar elements -->
+         <ul class="flex gap-x-6 ">
+            <li class=" relative font-mullish text-white py-7 hover:text-lightBlue transition-all duration-200  group"> 
+               Payments
+            <div class="absolute w-full h-1 bottom-0 bg-lightBlue hidden group-hover:block"></div>
+            </li>
+
+            <li class=" relative font-mullish text-white py-7 hover:text-lightBlue transition-all duration-200  group"> 
+               Banking
+               <div class="absolute w-full h-1 bottom-0 bg-lightBlue hidden group-hover:block"></div>
+            </li>
+
+
+            <li class=" relative font-mullish text-white py-7 hover:text-lightBlue transition-all duration-200  group"> 
+               Credits
+                  <div class="absolute w-full h-1 bottom-0 bg-lightBlue hidden group-hover:block"></div>
+            </li>
+
+            <li class=" relative font-mullish text-white py-7 hover:text-lightBlue transition-all duration-200  group"> 
+               Resources
+               <div class="absolute w-full h-1 bottom-0 bg-lightBlue hidden group-hover:block"></div>
+            </li>
+       
+            <li class=" relative font-mullish text-white py-7 hover:text-lightBlue transition-all duration-200  group"> 
+               Corporate Card
+              
+            </li>
+       
+
+            <li class=" relative font-mullish text-white py-7 hover:text-lightBlue transition-all duration-200  group"> 
+               Payroll
+               
+            </li>
+       
+
+            <li class=" relative font-mullish text-white py-7 hover:text-lightBlue transition-all duration-200  group"> 
+               Pricing
+               <div class="absolute w-full h-1 bottom-0 bg-lightBlue hidden group-hover:block"></div>
+            </li>
+
+
+            <div class="flex items-center gap-x-6">
+               <img class="h-[20px] w-[28px]" src="./images/india-flag.svg" alt="">
+               <button class=" font-bold text-sm font-mullish text-white border-2 border-lightBlue py-2 px-5 rounded  hover:bg-lightBlue500 transition-all duration-200">Log In</button>
+               
+               <button class=" flex items-center gap-x-1 bg-white font-semibold text-sm font-mullish text-lightBlue border-2 border-white py-2 px-5 rounded  hover:text-lightBlue500  hover:gap-x-2">
+                  Signup <i class="fa-solid fa-arrow-right"></i>
+               </button>
+
+            </div>
+
+         </ul>
+      </div>
    </nav>
+
 </body>
 </html>
