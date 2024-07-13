@@ -1,0 +1,17 @@
+.companies
+{
+    animation: slider 30s infinite linear ;
+}
+
+@keyframes slider {
+    0%
+    {
+        transform:translateY(0%);
+    }
+
+    100%
+    {
+        transform: translateY(-80%);
+    }
+    
+}
