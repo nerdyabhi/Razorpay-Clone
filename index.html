@@ -23,7 +23,7 @@
 
         <!-- Navbar elements -->
 
-        <ul id="nav"  class=" transition-all duration-350 left-[-500px] md:left-0 justify-between flex md:justify-between   bg-deepBlue absolute  top-[100px] w-full h-[110vh] md:max-h-[100px] items-center  flex-col gap-1 md:flex-row md:gap-x-6 z-[1000] md:relative md:top-[7px] overflow-hidden">
+        <ul id="nav"  class=" transition-all duration-350 left-[-500%] md:left-0 justify-between flex md:justify-between   bg-deepBlue absolute  top-[100px] w-full h-[calc(100vh - 100px)] pb-10 md:max-h-[100px] items-center  flex-col gap-1 md:flex-row md:gap-x-6 z-[1000] md:relative md:top-[7px] overflow-hidden">
 
             <li class=" relative font-mullish text-white py-7 hover:text-lightBlue transition-all duration-200  group"> 
                <a href="#">Home</a>
@@ -121,7 +121,7 @@
 
       <!-- Bottom Shape -->
 
-         <div class=" hidden md:block absolute w-full md:w-[103%] left-0 right-0 top-[98%] md:-right-2 z-[1000]">
+         <div class=" md:block absolute w-full md:w-[103%] left-0 right-0 top-[98%] md:-right-2  ">
             <img  class="w-full md:w-[103%]" src="./images/hero-shape.svg" alt="">
           </div>
    
@@ -911,11 +911,11 @@
  function navToggle() {
 
   const nav = document.getElementById("nav");
-  if (nav.classList.contains('left-[-500px]')) {
-    nav.classList.remove('left-[-500px]');
+  if (nav.classList.contains('left-[-500%]')) {
+    nav.classList.remove('left-[-500%]');
     nav.classList.add('left-0');
   } else {
-    nav.classList.add('left-[-500px]');
+    nav.classList.add('left-[-500%]');
   }
 }
 
