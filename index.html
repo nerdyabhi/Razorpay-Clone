@@ -13,16 +13,18 @@
 <body class=" overflow-x-hidden max-w-[100vw]">
 
    <!-- Navigation Bar -->
-   <nav class="bg-deepBlue">
-      <div class="mx-10 max-w-[1080px] md:mx-auto flex items-center justify-between overflow-x-hidden "> <!-- Container -->
+   <nav class="bg-deepBlue ">
+      <div class="mx-10 max-w-[1080px] md:mx-auto  items-center flex flex-row justify-between overflow-hidden  md:items-end "> <!-- Container -->
 
          <!-- Razorpay Logo -->
-         <a href="#" class="pr-7 py-7">
+         <a href="#" class=" pr-7 py-7 z-[1001]">
             <img class="w-[125px] h-[30px]" src="./images/logo.svg" alt="">
          </a>
 
-         <!-- Navbar elements -->
-         <ul class="hidden lg:flex md:gap-x-6 ">
+        <!-- Navbar elements -->
+
+        <ul id="nav"  class=" transition-all duration-350 left-[-500px] md:left-0 justify-between flex md:justify-between   bg-deepBlue absolute  top-[100px] w-full h-[110vh] md:max-h-[100px] items-center  flex-col gap-1 md:flex-row md:gap-x-6 z-[1000] md:relative md:top-[7px] overflow-hidden">
+
             <li class=" relative font-mullish text-white py-7 hover:text-lightBlue transition-all duration-200  group"> 
                <a href="#">Home</a>
             <div class="absolute w-full h-1 bottom-0 bg-lightBlue hidden group-hover:block"></div>
@@ -62,7 +64,7 @@
             </li>
 
 
-            <div class="flex items-center gap-x-6">
+            <div class="flex flex-col md:flex-row items-center gap-x-6  gap-y-4 z-[1000] ">
                <img class="h-[20px] w-[28px]" src="./images/india-flag.svg" alt="">
                <button class=" font-bold text-md:font-mullish text-white border-2 border-lightBlue py-2 px-5 rounded  hover:bg-lightBlue500 transition-all duration-200">Log In</button>
                
@@ -77,10 +79,10 @@
 
          <!-- Hamburger -->
 
-         <div class="hamburger lg:hidden space-x-4">
+         <div class="hamburger md:hidden space-x-4">
             
-            <button class=" font-bold text-md:font-mullish text-white border-2 border-lightBlue py-2 px-5 rounded  hover:bg-lightBlue500 transition-all duration-200">Log In</button>
-            <i class="fa-solid fa-bars text-white text-xl hover:text-lightBlue500"></i>
+            <button class=" hidden  font-bold text-md:font-mullish text-white border-2 border-lightBlue py-2 px-5 rounded  hover:bg-lightBlue500 transition-all duration-200">Log In</button>
+            <i onclick="navToggle()" class=" fa-solid fa-bars text-white text-xl hover:text-lightBlue500"></i>
 
 
          </div>
@@ -119,7 +121,7 @@
 
       <!-- Bottom Shape -->
 
-         <div class="absolute w-full md:w-[103%] left-0 right-0 top-[98%] md:-right-2 z-[1000]">
+         <div class=" hidden md:block absolute w-full md:w-[103%] left-0 right-0 top-[98%] md:-right-2 z-[1000]">
             <img  class="w-full md:w-[103%]" src="./images/hero-shape.svg" alt="">
           </div>
    
@@ -143,13 +145,13 @@
          
 
          <!-- content box -->
-         <div class= "mt-[60px] ml-10 max-w-[500px] md:max-w-full md:w-full border-2 border-lightGray bg-white rounded-md relative py-12 min-h-[520px] mx-auto ">
+         <div class= "mt-[60px] md:ml-10  max-w-[500px] md:max-w-full md:w-full border-2 border-lightGray bg-white rounded-md relative py-12 min-h-[520px] mx-auto ">
 
                <!-- Left part -->
 
-                <div class="flex flex-col justify-between items-center md:items-start w-full md:ml-10 ">
+                <div class="flex flex-col justify-between items-center md:items-start w-full md:ml-10 p-5 md:p-1  ">
                     
-                  <h3 class="font-mullish text-2xl leading-10 font-bold   md:max-w-[500px] ml-5 ">Supercharge your business with the all‑powerful <span class="text-lightBlue500">Payment Gateway</span></h3>
+                  <h3 class="font-mullish text-2xl leading-10 font-bold   md:max-w-[500px]  ">Supercharge your business with the all‑powerful <span class="text-lightBlue500">Payment Gateway</span></h3>
 
                      <!-- List of features -->
                      <ul class=" space-y-2 my-6">
@@ -190,12 +192,12 @@
 
                      
                      <!-- Bottom buttons -->
-                     <div class="my-10">
+                     <div class="my-10 flex flex-col md:flex-row items-center">
                         <button class=" bg-lightBlue font-bold text-sm font-mullish text-white border-2 border-lightBlue py-2 px-5 rounded  hover:bg-lightBlue500 transition-all duration-200 mr-5">
                            Signup Now
                            <i class="fa-solid fa-arrow-right ml-1"></i>
                         </button>
-                        <a href="#" class="text-lightBlue500 font-semibold hover:text-black transition-all duration-200 ">Know More <i class="fa-light fa-greater-than"></i></i> </a>
+                        <a href="#" class="hidden md:block text-lightBlue500 font-semibold hover:text-black transition-all duration-200 ">Know More <i class="fa-light fa-greater-than"></i></i> </a>
                      </div>
 
                      <img   class=" hidden md:block md:absolute right-0 top-0  bottom-0 max-w-[600px]" src="./images/payment-suite.png" alt="">
@@ -207,11 +209,11 @@
 
          
          <!-- Feature boxes -->
-         <div class="ml-[38px] w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 my-[60px]">
+         <div class="ml-[38px] w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-12 md:gap-4 my-[60px] ">
 
             <!-- Box -1  -->
 
-            <div class="box1 max-w-[70vw] md:w-full min-h-[15rem] bg-white relative group ">
+            <div class="box1 max-w-[70vw] md:w-full min-h-[15rem] bg-white relative group py-2  shadow-2xl shadow-lightGray md:shadow-none ">
 
                <!-- Box- Icon -->
                <img class="bg-lightBlue transition-all duration-200 absolute top-3 right-3 rounded-full w-12 h-12 group-hover:bg-gradient-to-r from-cyan-500 to-blue-500" src="./images/current-icon.svg" alt="">
@@ -219,10 +221,10 @@
               
 
                 <!-- Box-content -->
-               <div class="content absolute  flex flex-col gap-4  left-7 text-black py-4 pr-8 z-10">
+               <div class="content absolute  flex flex-col gap-1 md:gap-5   left-7 text-black py-2 md:py-5 pr-8 z-10">
                   <h2 class="font-bold font-mullish text-[1.375rem]">Current account</h2>
                   
-                  <p class="text-grayText">Current accounts for fast-growing businesses, supported by the best-in-class technology </p>     
+                  <p class="text-grayText mt-3 md:mt-0">Current accounts for fast-growing businesses, supported by the best-in-class technology </p>     
                
                   
                   <a href="#" class="text-lightBlue500 mt-10 font-bold hover:text-lightBlue300">Know more <i class="fa-solid fa-greater-than"></i></i> </a>
@@ -230,7 +232,7 @@
                </div>
 
                <!-- Box-shape  -->
-               <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="stroke-1 stroke-[#818597] h-full w-full absolute z-[0] featureCardSVG transition-all duration-200  group-hover:drop-shadow-2xl" style="stroke-opacity: 0.15 ">
+               <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="stroke-1 stroke-[#818597] md:h-full h-full w-full absolute z-[0] featureCardSVG transition-all duration-200  group-hover:drop-shadow-2xl " style="stroke-opacity: 0.15  ">
                   <path d="m 0 6 
                   a 6 6 0 0 1 6 -6 
                   h 250.32501220703125 
@@ -248,7 +250,7 @@
 
 
                <!-- box-2 -->
-            <div class="box1 max-w-[70vw] md:w-full min-h-[15rem] bg-white relative group ">
+               <div class="box1 max-w-[70vw] md:w-full min-h-[15rem] bg-white relative group py-2  shadow-2xl shadow-lightGray md:shadow-none ">
 
                   <!-- Box- Icon -->
                   <img class="bg-lightBlue transition-all duration-200 absolute top-3 right-3 rounded-full w-12 h-12 group-hover:bg-gradient-to-r from-cyan-500 to-blue-500" src="./images/current-icon.svg" alt="">
@@ -256,10 +258,10 @@
                  
    
                    <!-- Box-content -->
-                  <div class="content absolute  flex flex-col gap-4  left-7 text-black py-4 pr-8 z-10">
+                  <div class="content absolute  flex flex-col gap-1 md:gap-5   left-7 text-black py-2 md:py-5 pr-8 z-10">
                      <h2 class="font-bold font-mullish text-[1.375rem]">Current account</h2>
                      
-                     <p class="text-grayText">Current accounts for fast-growing businesses, supported by the best-in-class technology </p>     
+                     <p class="text-grayText mt-3 md:mt-0">Current accounts for fast-growing businesses, supported by the best-in-class technology </p>     
                   
                      
                      <a href="#" class="text-lightBlue500 mt-10 font-bold hover:text-lightBlue300">Know more <i class="fa-solid fa-greater-than"></i></i> </a>
@@ -267,7 +269,7 @@
                   </div>
    
                   <!-- Box-shape  -->
-                  <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="stroke-1 stroke-[#818597] h-full w-full absolute z-[0] featureCardSVG transition-all duration-200  group-hover:drop-shadow-2xl" style="stroke-opacity: 0.15 ">
+                  <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="stroke-1 stroke-[#818597] md:h-full h-full w-full absolute z-[0] featureCardSVG transition-all duration-200  group-hover:drop-shadow-2xl " style="stroke-opacity: 0.15  ">
                      <path d="m 0 6 
                      a 6 6 0 0 1 6 -6 
                      h 250.32501220703125 
@@ -281,12 +283,12 @@
                      z" fill="#fff"></path>
                    </svg>
    
-               </div>
+                  </div>
 
                
             <!-- Box -3  -->
 
-            <div class="box1 max-w-[70vw] md:w-full min-h-[15rem] bg-white relative group ">
+            <div class="box1 max-w-[70vw] md:w-full min-h-[15rem] bg-white relative group py-2  shadow-2xl shadow-lightGray md:shadow-none ">
 
                <!-- Box- Icon -->
                <img class="bg-lightBlue transition-all duration-200 absolute top-3 right-3 rounded-full w-12 h-12 group-hover:bg-gradient-to-r from-cyan-500 to-blue-500" src="./images/current-icon.svg" alt="">
@@ -294,10 +296,10 @@
               
 
                 <!-- Box-content -->
-               <div class="content absolute  flex flex-col gap-4  left-7 text-black py-4 pr-8 z-10">
+               <div class="content absolute  flex flex-col gap-1 md:gap-5   left-7 text-black py-2 md:py-5 pr-8 z-10">
                   <h2 class="font-bold font-mullish text-[1.375rem]">Current account</h2>
                   
-                  <p class="text-grayText">Current accounts for fast-growing businesses, supported by the best-in-class technology </p>     
+                  <p class="text-grayText mt-3 md:mt-0">Current accounts for fast-growing businesses, supported by the best-in-class technology </p>     
                
                   
                   <a href="#" class="text-lightBlue500 mt-10 font-bold hover:text-lightBlue300">Know more <i class="fa-solid fa-greater-than"></i></i> </a>
@@ -305,7 +307,7 @@
                </div>
 
                <!-- Box-shape  -->
-               <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="stroke-1 stroke-[#818597] h-full w-full absolute z-[0] featureCardSVG transition-all duration-200  group-hover:drop-shadow-2xl" style="stroke-opacity: 0.15 ">
+               <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="stroke-1 stroke-[#818597] md:h-full h-full w-full absolute z-[0] featureCardSVG transition-all duration-200  group-hover:drop-shadow-2xl " style="stroke-opacity: 0.15  ">
                   <path d="m 0 6 
                   a 6 6 0 0 1 6 -6 
                   h 250.32501220703125 
@@ -319,11 +321,10 @@
                   z" fill="#fff"></path>
                 </svg>
 
-            </div>
-
+               </div>
 
             <!-- box-4 -->
-            <div class="box1 max-w-[70vw] md:w-full min-h-[15rem] bg-white relative group ">
+            <div class="box1 max-w-[70vw] md:w-full min-h-[15rem] bg-white relative group py-2  shadow-2xl shadow-lightGray md:shadow-none ">
 
                <!-- Box- Icon -->
                <img class="bg-lightBlue transition-all duration-200 absolute top-3 right-3 rounded-full w-12 h-12 group-hover:bg-gradient-to-r from-cyan-500 to-blue-500" src="./images/current-icon.svg" alt="">
@@ -331,10 +332,10 @@
               
 
                 <!-- Box-content -->
-               <div class="content absolute  flex flex-col gap-4  left-7 text-black py-4 pr-8 z-10">
+               <div class="content absolute  flex flex-col gap-1 md:gap-5   left-7 text-black py-2 md:py-5 pr-8 z-10">
                   <h2 class="font-bold font-mullish text-[1.375rem]">Current account</h2>
                   
-                  <p class="text-grayText">Current accounts for fast-growing businesses, supported by the best-in-class technology </p>     
+                  <p class="text-grayText mt-3 md:mt-0">Current accounts for fast-growing businesses, supported by the best-in-class technology </p>     
                
                   
                   <a href="#" class="text-lightBlue500 mt-10 font-bold hover:text-lightBlue300">Know more <i class="fa-solid fa-greater-than"></i></i> </a>
@@ -342,7 +343,7 @@
                </div>
 
                <!-- Box-shape  -->
-               <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="stroke-1 stroke-[#818597] h-full w-full absolute z-[0] featureCardSVG transition-all duration-200  group-hover:drop-shadow-2xl" style="stroke-opacity: 0.15 ">
+               <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="stroke-1 stroke-[#818597] md:h-full h-full w-full absolute z-[0] featureCardSVG transition-all duration-200  group-hover:drop-shadow-2xl " style="stroke-opacity: 0.15  ">
                   <path d="m 0 6 
                   a 6 6 0 0 1 6 -6 
                   h 250.32501220703125 
@@ -356,11 +357,12 @@
                   z" fill="#fff"></path>
                 </svg>
 
-            </div>
+               </div>
+
 
             <!-- Box -5  -->
 
-            <div class="box1 max-w-[70vw] md:w-full min-h-[15rem] bg-white relative group ">
+            <div class="box1 max-w-[70vw] md:w-full min-h-[15rem] bg-white relative group py-2  shadow-2xl shadow-lightGray md:shadow-none ">
 
                <!-- Box- Icon -->
                <img class="bg-lightBlue transition-all duration-200 absolute top-3 right-3 rounded-full w-12 h-12 group-hover:bg-gradient-to-r from-cyan-500 to-blue-500" src="./images/current-icon.svg" alt="">
@@ -368,10 +370,10 @@
               
 
                 <!-- Box-content -->
-               <div class="content absolute  flex flex-col gap-4  left-7 text-black py-4 pr-8 z-10">
+               <div class="content absolute  flex flex-col gap-1 md:gap-5   left-7 text-black py-2 md:py-5 pr-8 z-10">
                   <h2 class="font-bold font-mullish text-[1.375rem]">Current account</h2>
                   
-                  <p class="text-grayText">Current accounts for fast-growing businesses, supported by the best-in-class technology </p>     
+                  <p class="text-grayText mt-3 md:mt-0">Current accounts for fast-growing businesses, supported by the best-in-class technology </p>     
                
                   
                   <a href="#" class="text-lightBlue500 mt-10 font-bold hover:text-lightBlue300">Know more <i class="fa-solid fa-greater-than"></i></i> </a>
@@ -379,7 +381,7 @@
                </div>
 
                <!-- Box-shape  -->
-               <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="stroke-1 stroke-[#818597] h-full w-full absolute z-[0] featureCardSVG transition-all duration-200  group-hover:drop-shadow-2xl" style="stroke-opacity: 0.15 ">
+               <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="stroke-1 stroke-[#818597] md:h-full h-full w-full absolute z-[0] featureCardSVG transition-all duration-200  group-hover:drop-shadow-2xl " style="stroke-opacity: 0.15  ">
                   <path d="m 0 6 
                   a 6 6 0 0 1 6 -6 
                   h 250.32501220703125 
@@ -393,11 +395,11 @@
                   z" fill="#fff"></path>
                 </svg>
 
-            </div>
+               </div>
 
 
             <!-- box-6 -->
-            <div class="box1 max-w-[70vw] md:w-full min-h-[15rem] bg-white relative group ">
+            <div class="box1 max-w-[70vw] md:w-full min-h-[15rem] bg-white relative group py-2  shadow-2xl shadow-lightGray md:shadow-none ">
 
                <!-- Box- Icon -->
                <img class="bg-lightBlue transition-all duration-200 absolute top-3 right-3 rounded-full w-12 h-12 group-hover:bg-gradient-to-r from-cyan-500 to-blue-500" src="./images/current-icon.svg" alt="">
@@ -405,10 +407,10 @@
               
 
                 <!-- Box-content -->
-               <div class="content absolute  flex flex-col gap-4  left-7 text-black py-4 pr-8 z-10">
+               <div class="content absolute  flex flex-col gap-1 md:gap-5   left-7 text-black py-2 md:py-5 pr-8 z-10">
                   <h2 class="font-bold font-mullish text-[1.375rem]">Current account</h2>
                   
-                  <p class="text-grayText">Current accounts for fast-growing businesses, supported by the best-in-class technology </p>     
+                  <p class="text-grayText mt-3 md:mt-0">Current accounts for fast-growing businesses, supported by the best-in-class technology </p>     
                
                   
                   <a href="#" class="text-lightBlue500 mt-10 font-bold hover:text-lightBlue300">Know more <i class="fa-solid fa-greater-than"></i></i> </a>
@@ -416,7 +418,7 @@
                </div>
 
                <!-- Box-shape  -->
-               <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="stroke-1 stroke-[#818597] h-full w-full absolute z-[0] featureCardSVG transition-all duration-200  group-hover:drop-shadow-2xl" style="stroke-opacity: 0.15 ">
+               <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="stroke-1 stroke-[#818597] md:h-full h-full w-full absolute z-[0] featureCardSVG transition-all duration-200  group-hover:drop-shadow-2xl " style="stroke-opacity: 0.15  ">
                   <path d="m 0 6 
                   a 6 6 0 0 1 6 -6 
                   h 250.32501220703125 
@@ -430,7 +432,7 @@
                   z" fill="#fff"></path>
                 </svg>
 
-            </div>
+               </div>
          </div>
       </div>
 
@@ -499,7 +501,7 @@
                                        </svg>
                                  </div>
                            </button>
-                           <a href="#" class="text-lightBlue500 font-semibold hover:text-black transition-all duration-200 ">Know More <i class="fa-light fa-greater-than"></i></i> </a>
+                           <a href="#" class="hidden md:block text-lightBlue500 font-semibold hover:text-black transition-all duration-200 ">Know More <i class="fa-light fa-greater-than"></i></i> </a>
                         </div>
 
                         <img  class=" hidden md:block absolute right-0 top-0  bottom-0 max-w-[600px]" src="./images/buisness-banking.png" alt="">
@@ -541,7 +543,7 @@
                <p class="text-grayText">Current accounts for fast-growing businesses, supported by the best-in-class technology </p>     
             
                
-               <a href="#" class="text-lightBlue500 mt-10 font-bold hover:text-lightBlue300">Know more <i class="fa-solid fa-greater-than"></i></i> </a>
+               <a href="#" class=" text-lightBlue500 mt-10 font-bold hover:text-lightBlue300">Know more <i class="fa-solid fa-greater-than"></i></i> </a>
 
             </div>
 
@@ -663,12 +665,12 @@
 
             <!-- Box -1  -->
 
-            <div class="box-1 bg-white ">
-                  <div class="container flex flex-col p-10 gap-3">
+            <div class="box-1 bg-white  ">
+                  <div class="container flex flex-col p-10 gap-3 ">
 
-                     <h3 class="font-bold font-mullish text-4xl text-deepBlueHead leading-[3.375rem]">New in the</h3>
+                     <h3 class="font-bold font-mullish text-3xl md:text-4xl text-deepBlueHead leading-[3.375rem]">New in the</h3>
                      <h2 class="font-bold text-4xl text-lightBlue500">Razorpay</h2>
-                     <h3 class="font-bold font-mullish text-4xl text-deepBlueHead leading-[3.375rem]">Product Suite</h3>
+                     <h3 class="font-bold font-mullish text-3xl md:text-4xl text-deepBlueHead leading-[3.375rem]">Product Suite</h3>
 
                   </div>
             </div>
@@ -904,5 +906,21 @@
 
 
 </body>
+
+<script>
+ function navToggle() {
+
+  const nav = document.getElementById("nav");
+  if (nav.classList.contains('left-[-500px]')) {
+    nav.classList.remove('left-[-500px]');
+    nav.classList.add('left-0');
+  } else {
+    nav.classList.add('left-[-500px]');
+  }
+}
+
+// Add this outside of any function
+// document.querySelector('.hamburger').addEventListener('click', navToggle);
+</script>
       
 </html>
